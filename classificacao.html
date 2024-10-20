@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação e Tempos Estimados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #chartContainer {
+            width: 50%;
+            margin-top: 30px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Classificação, Tempos e Ações Corretivas</h1>
+    <table id="resultadosTable">
+        <thead>
+            <tr>
+                <th>Pergunta</th>
+                <th>Classificação</th>
+                <th>Tempo Estimado</th>
+                <th>Ação Corretiva</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os resultados inseridos aqui -->
+        </tbody>
+    </table>
+
+    <h2>Indicadores</h2>
+    <table id="indicadoresTable">
+        <thead>
+            <tr>
+                <th>Indicador</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Número Total de Perguntas</td>
+                <td id="totalPerguntas">20</td>
+            </tr>
+            <tr>
+                <td>Número de Perguntas Aplicáveis</td>
+                <td id="perguntasAplicaveis">0</td>
+            </tr>
+            <tr>
+                <td>Número de Respostas "Sim"</td>
+                <td id="respostasSim">0</td>
+            </tr>
+            <tr>
+                <td>Número de Respostas "Não"</td>
+                <td id="respostasNao">0</td>
+            </tr>
+            <tr>
+                <td>Aderência (%)</td>
+                <td id="aderencia">0%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Dashboard de Aderência</h2>
+    <div id="chartContainer">
+        <canvas id="adherenceChart"></canvas>
+    </div>
+
+    <div class="buttons">
+        <button onclick="novaConsulta()">Nova consulta</button>
+    </div>
+
+    <script>
+        const respostas = JSON.parse(localStorage.getItem('respostas')) || {};
+
+        const resultados = JSON.parse(localStorage.getItem('resultados')) || [];
+
+        const tableBody = document.querySelector('#resultadosTable tbody');
+        resultados.forEach(resultado => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${resultado.pergunta}</td>
+                <td>${resultado.classificacao}</td>
+                <td>${resultado.horas}</td>
+                <td>${resultado.acao}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+
+        const totalPerguntas = 20;
+        let perguntasAplicaveis = 0;
+        let respostasSim = 0;
+        let respostasNao = resultados.length;
+
+        for (const key in respostas) {
+            if (respostas[key] === 'sim') {
+                respostasSim++;
+                perguntasAplicaveis++;
+            } else if (respostas[key] === 'nao') {
+                perguntasAplicaveis++;
+            }
+        }
+
+        const aderencia = perguntasAplicaveis > 0 ? ((respostasSim / perguntasAplicaveis) * 100).toFixed(2) : "0.00";
+
+        document.getElementById('totalPerguntas').innerText = totalPerguntas;
+        document.getElementById('perguntasAplicaveis').innerText = perguntasAplicaveis;
+        document.getElementById('respostasSim').innerText = respostasSim;
+        document.getElementById('respostasNao').innerText = respostasNao;
+        document.getElementById('aderencia').innerText = `${aderencia}%`;
+
+        const ctx = document.getElementById('adherenceChart').getContext('2d');
+        const adherenceChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Sim', 'Não'],
+                datasets: [{
+                    data: [respostasSim, respostasNao],
+                    backgroundColor: ['#00FF00', '#FF0000'],
+                    borderColor: ['#FFFFFF', '#FFFFFF'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                return tooltipItem.label + ': ' + tooltipItem.raw + ' respostas';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        function novaConsulta() {
+            localStorage.clear();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

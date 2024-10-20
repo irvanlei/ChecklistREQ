@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist para Engenharia de Requisitos (REQ)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 20px;
+            margin: 20px 0 10px;
+        }
+        .question {
+            margin: 10px 0;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checklist para Engenharia de Requisitos (REQ)</h1>
+
+    <h2>Identificação e Entendimento das Necessidades:</h2>
+    <form id="checklistForm">
+        <div class="question">
+            <label for="q1">1. As necessidades e expectativas das partes interessadas foram identificadas?</label>
+            <div class="options">
+                <input type="radio" id="q1_sim" name="q1" value="sim" required> Sim
+                <input type="radio" id="q1_nao" name="q1" value="nao"> Não
+                <input type="radio" id="q1_na" name="q1" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q2">2. O entendimento dos requisitos foi confirmado com todas as partes interessadas?</label>
+            <div class="options">
+                <input type="radio" id="q2_sim" name="q2" value="sim" required> Sim
+                <input type="radio" id="q2_nao" name="q2" value="nao"> Não
+                <input type="radio" id="q2_na" name="q2" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q3">3. Critérios foram utilizados para a definição das partes interessadas?</label>
+            <div class="options">
+                <input type="radio" id="q3_sim" name="q3" value="sim" required> Sim
+                <input type="radio" id="q3_nao" name="q3" value="nao"> Não
+                <input type="radio" id="q3_na" name="q3" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Especificação e Priorização dos Requisitos:</h2>
+        <div class="question">
+            <label for="q4">4. Os requisitos foram especificados de acordo com as necessidades identificadas?</label>
+            <div class="options">
+                <input type="radio" id="q4_sim" name="q4" value="sim" required> Sim
+                <input type="radio" id="q4_nao" name="q4" value="nao"> Não
+                <input type="radio" id="q4_na" name="q4" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q5">5. Todos os requisitos foram priorizados de acordo com as expectativas das partes interessadas?</label>
+            <div class="options">
+                <input type="radio" id="q5_sim" name="q5" value="sim" required> Sim
+                <input type="radio" id="q5_nao" name="q5" value="nao"> Não
+                <input type="radio" id="q5_na" name="q5" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q6">6. Os requisitos estão documentados e atualizados conforme alterações ocorram?</label>
+            <div class="options">
+                <input type="radio" id="q6_sim" name="q6" value="sim" required> Sim
+                <input type="radio" id="q6_nao" name="q6" value="nao"> Não
+                <input type="radio" id="q6_na" name="q6" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Rastreabilidade e Compromisso:</h2>
+        <div class="question">
+            <label for="q7">7. A rastreabilidade entre os requisitos e os produtos de trabalho foi estabelecida?</label>
+            <div class="options">
+                <input type="radio" id="q7_sim" name="q7" value="sim" required> Sim
+                <input type="radio" id="q7_nao" name="q7" value="nao"> Não
+                <input type="radio" id="q7_na" name="q7" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q8">8. O compromisso da equipe técnica com a implementação dos requisitos foi obtido e registrado?</label>
+            <div class="options">
+                <input type="radio" id="q8_sim" name="q8" value="sim" required> Sim
+                <input type="radio" id="q8_nao" name="q8" value="nao"> Não
+                <input type="radio" id="q8_na" name="q8" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q9">9. Os requisitos foram revisados para identificar possíveis inconsistências com os planos e produtos de trabalho?</label>
+            <div class="options">
+                <input type="radio" id="q9_sim" name="q9" value="sim" required> Sim
+                <input type="radio" id="q9_nao" name="q9" value="nao"> Não
+                <input type="radio" id="q9_na" name="q9" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Alocação e Validação dos Requisitos:</h2>
+        <div class="question">
+            <label for="q10">10. Os requisitos foram alocados para implementação conforme os cenários e conceitos operacionais definidos?</label>
+            <div class="options">
+                <input type="radio" id="q10_sim" name="q10" value="sim" required> Sim
+                <input type="radio" id="q10_nao" name="q10" value="nao"> Não
+                <input type="radio" id="q10_na" name="q10" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q11">11. Existe uma validação formal dos requisitos antes do início do desenvolvimento?</label>
+            <div class="options">
+                <input type="radio" id="q11_sim" name="q11" value="sim" required> Sim
+                <input type="radio" id="q11_nao" name="q11" value="nao"> Não
+                <input type="radio" id="q11_na" name="q11" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q12">12. Os requisitos foram analisados para garantir que são necessários e suficientes?</label>
+            <div class="options">
+                <input type="radio" id="q12_sim" name="q12" value="sim" required> Sim
+                <input type="radio" id="q12_nao" name="q12" value="nao"> Não
+                <input type="radio" id="q12_na" name="q12" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Gerenciamento de Mudanças:</h2>
+        <div class="question">
+            <label for="q13">13. Há um processo definido para gerenciar mudanças nos requisitos ao longo do projeto?</label>
+            <div class="options">
+                <input type="radio" id="q13_sim" name="q13" value="sim" required> Sim
+                <input type="radio" id="q13_nao" name="q13" value="nao"> Não
+                <input type="radio" id="q13_na" name="q13" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q14">14. As partes interessadas são envolvidas no processo de atualização e validação das mudanças de requisitos?</label>
+            <div class="options">
+                <input type="radio" id="q14_sim" name="q14" value="sim" required> Sim
+                <input type="radio" id="q14_nao" name="q14" value="nao"> Não
+                <input type="radio" id="q14_na" name="q14" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Integração com Planejamento e Atividades:</h2>
+        <div class="question">
+            <label for="q15">15. As atividades de projeto e os produtos de trabalho relacionados são revisados periodicamente para garantir a conformidade com os requisitos?</label>
+            <div class="options">
+                <input type="radio" id="q15_sim" name="q15" value="sim" required> Sim
+                <input type="radio" id="q15_nao" name="q15" value="nao"> Não
+                <input type="radio" id="q15_na" name="q15" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q16">16. Os requisitos são integrados e atualizados nos planos do projeto?</label>
+            <div class="options">
+                <input type="radio" id="q16_sim" name="q16" value="sim" required> Sim
+                <input type="radio" id="q16_nao" name="q16" value="nao"> Não
+                <input type="radio" id="q16_na" name="q16" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Documentação e Comunicação:</h2>
+        <div class="question">
+            <label for="q17">17. Os requisitos estão documentados de maneira clara e acessível para todos os membros da equipe?</label>
+            <div class="options">
+                <input type="radio" id="q17_sim" name="q17" value="sim" required> Sim
+                <input type="radio" id="q17_nao" name="q17" value="nao"> Não
+                <input type="radio" id="q17_na" name="q17" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q18">18. A comunicação dos requisitos e mudanças é feita de maneira eficiente e registrada no sistema de controle?</label>
+            <div class="options">
+                <input type="radio" id="q18_sim" name="q18" value="sim" required> Sim
+                <input type="radio" id="q18_nao" name="q18" value="nao"> Não
+                <input type="radio" id="q18_na" name="q18" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <h2>Controle de Qualidade e Auditoria:</h2>
+        <div class="question">
+            <label for="q19">19. Existem procedimentos para auditoria e verificação dos requisitos documentados?</label>
+            <div class="options">
+                <input type="radio" id="q19_sim" name="q19" value="sim" required> Sim
+                <input type="radio" id="q19_nao" name="q19" value="nao"> Não
+                <input type="radio" id="q19_na" name="q19" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+        <div class="question">
+            <label for="q20">20. Os requisitos passam por revisões periódicas para assegurar a conformidade e qualidade esperada?</label>
+            <div class="options">
+                <input type="radio" id="q20_sim" name="q20" value="sim" required> Sim
+                <input type="radio" id="q20_nao" name="q20" value="nao"> Não
+                <input type="radio" id="q20_na" name="q20" value="nao_se_aplica"> Não se aplica
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button type="button" onclick="processForm()">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+
+    <script>
+        function processForm() {
+            const form = document.getElementById('checklistForm');
+            const formData = new FormData(form);
+            const respostas = {};
+            
+            formData.forEach((value, key) => {
+                respostas[key] = value;
+            });
+    
+            const classificacoes = {
+                q1: { 
+                    classificacao: 'Alta-Severa', 
+                    horas: '8 horas', 
+                    acao: 'Reavaliar as partes interessadas envolvidas, realizando novas entrevistas e workshops para coletar as necessidades e expectativas de maneira clara e documentada.' 
+                },
+                q2: { 
+                    classificacao: 'Média-Complexa', 
+                    horas: '6 horas', 
+                    acao: 'Reunir-se novamente com as partes interessadas para apresentar os requisitos, discutindo detalhadamente e obtendo uma confirmação formal por meio de assinaturas ou aprovação eletrônica.' 
+                },
+                q3: { 
+                    classificacao: 'Média-Complexa', 
+                    horas: '5 horas', 
+                    acao: 'Revisar o processo de identificação das partes interessadas para garantir que critérios objetivos (como impacto, influência e necessidade de envolvimento no projeto) sejam utilizados. Documentar esses critérios e aplicá-los para identificar ou revisar a lista atual de partes interessadas, assegurando que todos os stakeholders relevantes estejam envolvidos. Realizar workshops ou sessões de alinhamento para validar e ajustar a lista conforme necessário.' 
+                },
+                q4: { 
+                    classificacao: 'Alta-Complexa', 
+                    horas: '7 horas', 
+                    acao: 'Revisar os requisitos especificados, garantindo que estejam alinhados com as necessidades levantadas, e ajustar os documentos de requisitos para refletir qualquer discrepância identificada.' 
+                },
+                q5: { 
+                    classificacao: 'Baixa-Simples', 
+                    horas: '2 horas', 
+                    acao: 'Conduzir uma sessão de priorização com as partes interessadas, utilizando técnicas como MoSCoW ou análise de valor para determinar as prioridades corretamente e ajustar a documentação conforme necessário.' 
+                },
+                q6: { 
+                    classificacao: 'Média-Simples', 
+                    horas: '3 horas', 
+                    acao: 'Estabelecer um controle de versão formal para o documento de requisitos e revisar o processo de atualização para garantir que qualquer alteração seja registrada, comunicada e aprovada por todos os envolvidos.' 
+                },
+                q7: { 
+                    classificacao: 'Alta-Severa', 
+                    horas: '8 horas', 
+                    acao: 'Implementar uma matriz de rastreabilidade que vincule cada requisito aos produtos de trabalho e atividades correspondentes, e revisar todos os requisitos para garantir que estejam devidamente conectados e documentados.' 
+                },
+                q8: { 
+                    classificacao: 'Média-Simples', 
+                    horas: '4 horas', 
+                    acao: 'Organizar reuniões com a equipe técnica para revisar os requisitos e obter um compromisso formal, documentando esse compromisso em atas ou documentos de aceitação assinados pela equipe.' 
+                },
+                q9: { 
+                    classificacao: 'Alta-Complexa', 
+                    horas: '7 horas', 
+                    acao: 'Realizar uma análise de inconsistências através de sessões de revisão de requisitos com as equipes de planejamento e execução, ajustando os requisitos e os planos conforme necessário para eliminar qualquer divergência.' 
+                },
+                q10: { 
+                    classificacao: 'Média-Complexa', 
+                    horas: '5 horas', 
+                    acao: 'Reavaliar os requisitos e alocá-los corretamente, garantindo que cada requisito tenha um responsável e esteja associado a cenários e conceitos operacionais claros e devidamente documentados.' 
+                },
+                q11: { 
+                    classificacao: 'Alta-Severa', 
+                    horas: '8 horas', 
+                    acao: 'Criar um processo formal de validação que inclua revisões por pares, simulações de cenários e testes iniciais para validar os requisitos, registrando os resultados e implementando ajustes quando necessário.' 
+                },
+                q12: { 
+                    classificacao: 'Média-Complexa', 
+                    horas: '6 horas', 
+                    acao: 'Conduzir uma análise detalhada dos requisitos usando técnicas como análise de causa-raiz ou entrevistas adicionais com as partes interessadas para verificar sua necessidade e suficiência, ajustando-os conforme necessário.' 
+                },
+                q13: { 
+                    classificacao: 'Alta-Severa', 
+                    horas: '8 horas', 
+                    acao: 'Desenvolver e implementar um processo formal de gerenciamento de mudanças que inclua a análise de impacto, aprovação das partes interessadas e atualização dos documentos de requisitos.' 
+                },
+                q14: { 
+                    classificacao: 'Média-Simples', 
+                    horas: '3 horas', 
+                    acao: 'Estabelecer um ciclo de comunicação regular com as partes interessadas para revisar mudanças nos requisitos e garantir que elas sejam validadas e aprovadas por todos os envolvidos antes de serem implementadas.' 
+                },
+                q15: { 
+                    classificacao: 'Alta-Complexa', 
+                    horas: '7 horas', 
+                    acao: 'Implementar checkpoints e auditorias internas regulares para garantir que as atividades e produtos de trabalho estão alinhados com os requisitos, documentando qualquer ajuste necessário para corrigir divergências.' 
+                },
+                q16: { 
+                    classificacao: 'Média-Simples', 
+                    horas: '4 horas', 
+                    acao: 'Revisar os planos do projeto e integrá-los aos requisitos atualizados, garantindo que todas as mudanças estejam refletidas nas atividades planejadas e que os responsáveis sejam informados sobre as atualizações.' 
+                },
+                q17: { 
+                    classificacao: 'Baixa-Simples', 
+                    horas: '2 horas', 
+                    acao: 'Revisar a documentação de requisitos e reformular as descrições, se necessário, para que sejam claras e objetivas. Garantir que a documentação esteja acessível em um repositório compartilhado e de fácil acesso.' 
+                },
+                q18: { 
+                    classificacao: 'Média-Simples', 
+                    horas: '3 horas', 
+                    acao: 'Estabelecer um sistema de comunicação formal (como reuniões regulares, e-mails documentados ou um sistema de gerenciamento de requisitos) para garantir que todas as mudanças sejam registradas e comunicadas às partes interessadas e equipes técnicas.' 
+                },
+                q19: { 
+                    classificacao: 'Alta-Complexa', 
+                    horas: '7 horas', 
+                    acao: 'Criar um plano de auditoria para revisar regularmente os requisitos e garantir que todos os processos de verificação estão sendo seguidos, documentando os resultados das auditorias e implementando ações corretivas quando necessário.' 
+                },
+                q20: { 
+                    classificacao: 'Alta-Severa', 
+                    horas: '8 horas', 
+                    acao: 'Estabelecer um cronograma de revisões periódicas com a equipe responsável e as partes interessadas para avaliar a conformidade e qualidade dos requisitos, realizando ajustes conforme necessário e registrando todos os resultados.' 
+                }
+            };
+    
+            const resultados = [];
+            for (const key in respostas) {
+                if (respostas[key] === 'nao') {
+                    const label = document.querySelector(`label[for="${key}"]`);
+                    if (label) {
+                        resultados.push({
+                            pergunta: label.innerText,
+                            classificacao: classificacoes[key].classificacao,
+                            horas: classificacoes[key].horas,
+                            acao: classificacoes[key].acao
+                        });
+                    }
+                }
+            }
+
+            localStorage.setItem('respostas', JSON.stringify(respostas));
+            localStorage.setItem('resultados', JSON.stringify(resultados));
+
+            if (resultados.length === 0) {
+                alert("Conformidade 100%! Parabéns!!");
+            } else {
+                window.location.href = 'classificacao.html';
+            }
+        }
+    </script>
+    
+</body>
+</html>
